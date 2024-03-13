@@ -11,7 +11,7 @@ app.use('/public', express.static('public'));
 
 // 루트 경로 ('/')에 대한 GET 요청을 처리합니다.
 app.get('/', (req, res) => {
-  res.send('Hello, Express.js!');
+  res.send('Hello, Express.js!!!');
 });
 
 app.post('/test', (req, res) => {
