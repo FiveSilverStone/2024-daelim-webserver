@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.send('Hello, Express.js!!!');
 });
 
+app.get('/add-photo', (req, res) => {
+  res.send('add photo 라우터');
+});
+
 app.post('/test', (req, res) => {
     console.log("테스트로 들어왔어요.")
     res.send('Hello, test!');
