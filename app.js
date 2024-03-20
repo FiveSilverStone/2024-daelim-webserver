@@ -1,4 +1,4 @@
-// Express 모듈을 불러옵니다.
+
 const express = require('express');
 
 // Express 애플리케이션을 생성합니다.
