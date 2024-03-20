@@ -4,7 +4,6 @@ const express = require('express');
 // Express 애플리케이션을 생성합니다.
 const app = express();
 
-// 기본 포트를 설정하거나 3000 포트를 사용합니다.
 const PORT = process.env.PORT || 3000;
 
 app.use('/public', express.static('public'));
