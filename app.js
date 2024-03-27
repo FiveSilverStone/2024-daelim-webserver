@@ -7,7 +7,7 @@ const app = express();
 // 기본 포트를 설정하거나 3000 포트를 사용합니다.
 const PORT = process.env.PORT || 3000;
 
-app.use('/public', express.static('public'));
+app.use('/static', express.static('public'));
 
 // 루트 경로 ('/')에 대한 GET 요청을 처리합니다.
 app.get('/', (req, res) => {
