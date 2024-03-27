@@ -7,21 +7,10 @@ const app = express();
 // 기본 포트를 설정하거나 3000 포트를 사용합니다.
 const PORT = process.env.PORT || 3000;
 
-app.use('/static', express.static('public'));
-
 // 루트 경로 ('/')에 대한 GET 요청을 처리합니다.
 app.get('/', (req, res) => {
-  res.send('Hello, Express.js!!!');
+  res.send('Hello, Express.js!');
 });
-
-app.get('/add-photo', (req, res) => {
-  res.send('add photo 라우터');
-});
-
-app.post('/test', (req, res) => {
-    console.log("테스트로 들어왔어요.")
-    res.send('Hello, test!');
-  });
 
 // 서버를 설정한 포트에서 실행합니다.
 app.listen(PORT, () => {
