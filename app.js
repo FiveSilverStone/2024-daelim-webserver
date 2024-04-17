@@ -46,15 +46,16 @@ app.post('/user', (req, res) => {
   const resultUser = users.find((userData) => {
     return userData.id === id
   });
-    if(resultUser) {
-      return res.status(400).send('이미 있는 사용자입니다');
-    }else{
-      if(pwd.length >= 8) {
-        return res.json({ message: `${id},${name},${pwd}를 받았습니다.` });
-      } else {
-        return res.status(400).send('pwd가 너무 짧습니다. (8자 이상)');
-      }
+
+  if(pwd.length < 8) {
+    return res.send('pwd가 너무 짧습니다. (8자 이상)');
+  }
+  
+  if(resultUser) {
+      return res.send('이미 있는 사용자입니다');
     }
+
+  return res.json({ message: `${id},${name},${pwd}를 받았습니다.` });
   });
 
 app.put('/user', (req, res) => {
